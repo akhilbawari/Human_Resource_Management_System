@@ -176,7 +176,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		
 	}
 
-
+    /*------Get Employee By Employee ID--------------------------*/
 
 	@Override
 	public Employee getEmployeeByID(int id2) throws EmployeeException {
@@ -217,6 +217,70 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			throw new EmployeeException(e.getMessage());
 		}
 		return emp;
+	}
+
+
+    /*----------Get List of employee by department id -------------------------------*/
+	@Override
+	public List<Employee> employeeByDepartment(int id) throws EmployeeException {
+		// TODO Auto-generated method stub
+		List<Employee>emp=new ArrayList();
+		try (Connection con=Utility.getConnection()){
+			PreparedStatement ps=con.prepareStatement("select * from Employee Where departmentID=?");
+			ps.setInt(1, id);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				Employee e=new Employee();
+				e.setId(rs.getInt("id"));
+				e.setFirstName(rs.getString("firstName"));
+				e.setLastName(rs.getString("lastName"));
+				e.setMobile(rs.getString("mobile"));
+				e.setEmail(rs.getString("email"));
+				e.setPassword(rs.getString("password"));
+				e.setDateOfBirth(rs.getString("dateOfBirth"));
+				e.setAddress(rs.getString("address"));
+				e.setSalary(rs.getInt("salary"));
+				e.setHireDate(rs.getString("hireDate"));
+				e.setDepartmentID(rs.getInt("departmentID"));
+				
+				emp.add(e);
+			}
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			throw new EmployeeException(e.getMessage());
+		}
+		
+		if(emp.size()==0) throw new EmployeeException("No employee found in this department");
+		
+		return emp;
+	}
+
+
+
+	@Override
+	public String updateEmployee(String Column, String typeName, int id) throws EmployeeException {
+		String msg="Something went wrong..";
+		
+        try (Connection con=Utility.getConnection()) {
+			
+			PreparedStatement ps=con.prepareStatement("update employee set "+Column+"=? where id=?");
+			
+			ps.setString(1, typeName);
+			ps.setInt(2, id);
+			
+			int x=ps.executeUpdate();
+			
+			if(x>0) {
+				msg=Column+" Updated Successfully";
+			}
+			
+		} catch (SQLException e) {
+			msg=e.getMessage();
+		}
+        
+        
+		return msg;
 	}
 	
 	

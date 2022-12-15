@@ -18,5 +18,9 @@ public interface EmployeeDao {
 	
 	public Employee getEmployeeByID(int id)throws EmployeeException;
 	
+	public List<Employee> employeeByDepartment(int id)throws EmployeeException;
+	
+	public String updateEmployee(String Column, String typeName, int id) throws EmployeeException;
+	
 	
 }
