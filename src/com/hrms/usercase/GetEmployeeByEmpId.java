@@ -1,6 +1,6 @@
 package com.hrms.usercase;
 
-import java.util.Scanner;
+
 
 import com.hrms.dao.EmployeeDao;
 import com.hrms.dao.EmployeeDaoImpl;
@@ -8,11 +8,8 @@ import com.hrms.exception.EmployeeException;
 
 public class GetEmployeeByEmpId {
 
-	public static void main(String[] args) {
+	public static void main(int id) {
 		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Employee ID: ");
-		int id=sc.nextInt();
 		
 		EmployeeDao dao=new EmployeeDaoImpl();
 		try {

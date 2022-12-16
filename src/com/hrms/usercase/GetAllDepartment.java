@@ -19,5 +19,6 @@ public class GetAllDepartment {
 		} catch (DepartmentException e) {
 			System.out.println(e.getMessage());
 		}
-}
+   }
+   
 }

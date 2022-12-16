@@ -8,12 +8,10 @@ import com.hrms.exception.LeavesException;
 
 public class ApprovedLeaves {
 
-	public static void main(String[] args) {
+	public static void main(int id) {
 		// TODO Auto-generated method stub
-       
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Employee id");
-		int id=sc.nextInt();
+  
+		
 		LeavesDao l=new LeavesDaoImpl();
 		String res;
 		try {

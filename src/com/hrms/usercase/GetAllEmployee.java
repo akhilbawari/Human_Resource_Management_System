@@ -21,6 +21,8 @@ public class GetAllEmployee {
 			} catch (EmployeeException e) {
 				System.out.println(e.getMessage());
 			}
+			
 	}
+	
 
 }

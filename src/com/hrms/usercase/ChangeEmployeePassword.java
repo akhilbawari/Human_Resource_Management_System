@@ -7,10 +7,8 @@ import com.hrms.dao.EmployeeDaoImpl;
 import com.hrms.exception.EmployeeException;
 
 public class ChangeEmployeePassword {
-  public static void main(String[] args) {
-	  Scanner sc=new Scanner(System.in);
-	  System.out.println("Enter your Employee Id: ");
-	  int empId=sc.nextInt();
+  public static void main(int empId) {
+	  
 	  EmployeeDao d=new EmployeeDaoImpl();
 		
 		

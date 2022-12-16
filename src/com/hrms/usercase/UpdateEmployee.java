@@ -8,11 +8,10 @@ import com.hrms.exception.EmployeeException;
 
 public class UpdateEmployee {
 
-	public static void main(String[] args) {
+	public static void main(int id) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Employee Id: ");
-		int id=sc.nextInt();
+		
 		
 		System.out.println("Select option which you want to Update :");
 		System.out.println("1. First Name");
