@@ -2,6 +2,7 @@ package com.hrms.usercase;
 
 import java.util.List;
 
+import com.hrms.customs.PrintTable;
 import com.hrms.dao.DepartmentDao;
 import com.hrms.dao.DepartmentDaoImpl;
 import com.hrms.exception.DepartmentException;
@@ -14,8 +15,7 @@ public class GetAllDepartment {
 		try {
 			List<Department>list=dao.getAllDepartment();
 			
-			System.out.println(list);
-
+			PrintTable.printDepartment(list);
 		} catch (DepartmentException e) {
 			System.out.println(e.getMessage());
 		}

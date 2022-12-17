@@ -25,6 +25,7 @@ public class Login {
 			return true;
 		}else{
 			return false;
+			
 		}
 		
 		
@@ -65,7 +66,9 @@ public class Login {
    				emp.setDepartmentID(rs.getInt("departmentID"));
    				
    				if(!emp.getPassword().equals(password)) {
+   					
    					throw new EmployeeException("Wrong Password");
+   					
    				}
    				
    			}

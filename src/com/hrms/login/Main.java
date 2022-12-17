@@ -2,6 +2,7 @@ package com.hrms.login;
 
 import java.util.Scanner;
 
+import com.hrms.customs.ConsoleColors;
 import com.hrms.exception.EmployeeException;
 import com.hrms.model.Employee;
 import com.hrms.panels.Panel;
@@ -13,7 +14,7 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 
 		while(true) {
-			System.out.println(""
+			System.out.println(ConsoleColors.ORANGE+""
 					+"╔═══════════════════╗\r\n"
 					+"    CHOOSE OPTION\r\n"
 					+"╚═══════════════════╝\r\n"
@@ -21,6 +22,8 @@ public class Main {
 					+"2. Employee login\r\n"
 					+"3. Exit");
 			
+			System.out.println("▃▃▃▃▃▃▃▃▃▃ Choose Option ▃▃▃▃▃▃▃▃▃▃▃");
+			System.out.println();
 			int choice=sc.nextInt();
 			
 			switch(choice) {
@@ -30,7 +33,7 @@ public class Main {
 					Panel.admin();
 				}
 				else {
-					System.out.println("Wrong credentials");
+					System.out.println("Wrong Credentials Try Again");
 				}
 				break;
 			case 2:
@@ -46,6 +49,8 @@ public class Main {
 			case 3:
 				System.out.println("See You...!");
 				System.exit(0);
+			default:
+				System.out.println("WRONG INPUT!!!!");
 			}
 		}
 

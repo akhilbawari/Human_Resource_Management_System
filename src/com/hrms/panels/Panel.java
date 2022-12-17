@@ -1,7 +1,6 @@
 package com.hrms.panels;
 
 import java.util.Scanner;
-
 import com.hrms.model.Employee;
 import com.hrms.usercase.AddDepartment;
 import com.hrms.usercase.ApprovedLeaves;

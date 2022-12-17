@@ -2,6 +2,7 @@ package com.hrms.usercase;
 
 import java.util.List;
 
+import com.hrms.customs.PrintTable;
 import com.hrms.dao.LeavesDao;
 import com.hrms.dao.LeavesDaoImpl;
 import com.hrms.exception.LeavesException;
@@ -15,7 +16,7 @@ public class ShowPendingLeaves {
 		List<Leaves> list=null;
 		try {
 			list = lev.pendingLeaves();
-			System.out.println(list);
+			PrintTable.printLeaveList(list);
 		} catch (LeavesException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

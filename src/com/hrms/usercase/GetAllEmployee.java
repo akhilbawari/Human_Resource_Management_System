@@ -2,7 +2,7 @@ package com.hrms.usercase;
 
 import java.util.List;
 
-
+import com.hrms.customs.PrintTable;
 import com.hrms.dao.EmployeeDao;
 import com.hrms.dao.EmployeeDaoImpl;
 import com.hrms.exception.EmployeeException;
@@ -16,7 +16,7 @@ public class GetAllEmployee {
 			try {
 				List<Employee>list=dao.getAllEmployee();
 				
-				System.out.println(list);
+				PrintTable.printEmployeeList(list);
 
 			} catch (EmployeeException e) {
 				System.out.println(e.getMessage());
