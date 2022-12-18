@@ -11,6 +11,7 @@ import com.hrms.usercase.GetAllDepartment;
 import com.hrms.usercase.GetAllEmployee;
 import com.hrms.usercase.GetEmployeeByEmpId;
 import com.hrms.usercase.RegisterEmployee;
+import com.hrms.usercase.RequestLeave;
 import com.hrms.usercase.ShowPendingLeaves;
 import com.hrms.usercase.UpdateDepartment;
 import com.hrms.usercase.UpdateEmployee;
@@ -40,7 +41,9 @@ public class Panel {
 		Thread.sleep(300);
 		System.out.println("╰┈┈┈┈➤ 10. Employee By Department");
 		Thread.sleep(300);
-		System.out.println("╰┈┈┈┈➤ 11. EXIT");
+		System.out.println("╰┈┈┈┈➤ 11. Approve Leave Request");
+		Thread.sleep(300);
+		System.out.println("╰┈┈┈┈➤ 12. EXIT");
 		Thread.sleep(500);
 		System.out.println();
 		System.out.println("———————— CHOOSE OPTION ————————");
@@ -97,7 +100,10 @@ public class Panel {
 			Panel.admin();
 			break;
 		case 11:
-			return;
+			System.out.println("Enter ID of Employee");
+			int id3=sc.nextInt();
+			ApprovedLeaves.main(id3);
+			Panel.admin();
 		default:
 			System.out.println("Wrong Input");
 	    
@@ -154,7 +160,7 @@ public class Panel {
 			Panel.employee(employee);
 			break;
 		case 4:
-			ApprovedLeaves.main(employee.getId());
+			RequestLeave.main(employee.getId());
 			Panel.employee(employee);
 			break;
 		case 5:

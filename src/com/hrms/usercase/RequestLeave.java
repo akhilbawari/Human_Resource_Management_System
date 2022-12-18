@@ -8,11 +8,9 @@ import com.hrms.exception.LeavesException;
 
 public class RequestLeave {
 
-	public static void main(String[] args) {
+	public static void main(int id) {
         
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter your Employee ID: ");
-	    int id=sc.nextInt();
 		System.out.println("Leave from Date in yyyy-mm-dd format");
 		String startDate=sc.next();
 		System.out.println("Leave till Date in yyyy-mm-dd format");
