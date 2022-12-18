@@ -43,6 +43,8 @@ public class Panel {
 		Thread.sleep(300);
 		System.out.println("╰┈┈┈┈➤ 11. Approve Leave Request");
 		Thread.sleep(300);
+		System.out.println("╰┈┈┈┈➤ 12. Reject Leave Request");
+		Thread.sleep(300);
 		System.out.println("╰┈┈┈┈➤ 12. EXIT");
 		Thread.sleep(500);
 		System.out.println();
@@ -103,6 +105,11 @@ public class Panel {
 			System.out.println("Enter ID of Employee");
 			int id3=sc.nextInt();
 			ApprovedLeaves.main(id3);
+			Panel.admin();
+		case 12:
+			System.out.println("Enter ID of Employee");
+			int id4=sc.nextInt();
+			RequestLeave.main(id4);
 			Panel.admin();
 		default:
 			System.out.println("Wrong Input");
