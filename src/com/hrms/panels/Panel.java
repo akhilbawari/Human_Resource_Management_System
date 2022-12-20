@@ -45,7 +45,7 @@ public class Panel {
 		Thread.sleep(300);
 		System.out.println("╰┈┈┈┈➤ 12. Reject Leave Request");
 		Thread.sleep(300);
-		System.out.println("╰┈┈┈┈➤ 12. EXIT");
+		System.out.println("╰┈┈┈┈➤ 13. EXIT");
 		Thread.sleep(500);
 		System.out.println();
 		System.out.println("———————— CHOOSE OPTION ————————");
@@ -111,6 +111,8 @@ public class Panel {
 			int id4=sc.nextInt();
 			RequestLeave.main(id4);
 			Panel.admin();
+		case 13:
+			return;
 		default:
 			System.out.println("Wrong Input");
 	    
