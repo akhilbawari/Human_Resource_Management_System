@@ -25,7 +25,7 @@
     <ol>
         <li>View Profile</li>
         <li>Update Profile</li>
-        <li>Update Profile</li>
+        <li>Change Password</li>
         <li>Apply for Leave</li>
     </ol>
     <br>
